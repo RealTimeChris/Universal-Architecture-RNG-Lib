@@ -2,15 +2,11 @@
 
 **A high-performance, cross-platform random number generation library with SIMD and GPU acceleration.**
 
----
-
 ## Overview
 
 `universal_rng_lib` is a fast, flexible RNG library written in modern C++. It supports a range of algorithms including **Xoroshiro128++** and **WyRand**, with runtime autodetection of the best CPU vectorization (SSE2, AVX2, AVX-512, NEON) and optional OpenCL GPU support.
 
 It significantly outperforms the C++ standard library RNGs and can replace them in scientific simulations, games, real-time systems, and more.
-
----
 
 ## Features
 
@@ -22,8 +18,6 @@ It significantly outperforms the C++ standard library RNGs and can replace them 
 - ✅ Support for 16–1024 bit generation
 - ✅ Cross-platform: Windows (MSVC, MinGW), Linux
 - ✅ MIT Licensed
-
----
 
 ## Quick Start
 
@@ -117,8 +111,6 @@ delete rng;
 universal_rng_free(rng);
 ```
 
----
-
 ## File Structure
 
 ```
@@ -146,8 +138,6 @@ universal_rng_free(rng);
 └── tests/                  # Self-test and benchmarks
 ```
 
----
-
 ## SIMD & Dispatch Design
 
 - Auto-detects best available instruction set at runtime
@@ -165,21 +155,15 @@ Trying AVX2 implementation...
 Using AVX2 implementation
 ```
 
----
-
 ## Benchmarking & Performance
 
 - Batch mode yields **1.7×–2.5×** speedup over naive generation
 - AVX2 performs **~3–5×** faster than `std::mt19937`
 - AVX-512 versions under development
 
----
-
 ## License
 
 MIT License – see [LICENSE.md](LICENSE.md) for full terms.
-
----
 
 ## Reference
 
